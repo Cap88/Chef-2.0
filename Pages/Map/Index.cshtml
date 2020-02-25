@@ -1,0 +1,50 @@
+@page
+@model ChefInternational.Pages.Map.IndexModel
+
+@{
+    ViewData["Title"] = "Map";
+}
+
+<!-- leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+crossorigin=""/>
+
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+crossorigin=""></script>
+
+<div class="d-flex justify-content-center">
+	<div id="mapid"></div>
+</div>
+@* <div id="mapid"></div> *@
+            
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+	<div class="modal-content">
+	  <div class="modal-header">
+		<h4 class="modal-title" id="myModalLabel">Recipes</h4>
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	  </div>
+	  <div class="modal-body justify-content-center" id="recipe-list">
+		<img class="center-block" id="loader" alt='loading' src='/static/ajax-loader.gif'/>
+	  </div>
+	  <div class="modal-footer">
+		<nav id="pagination">
+			<ul class="pagination justify-content-center">
+				<li  id="previous" class="page-item disabled">
+					<a class="page-link" aria-disabled="true" onclick="updatePagination(-1)">Previous</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" onclick="updatePagination(1)">Next</a>
+				</li>
+			</ul>
+		</nav>
+	  </div>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+@page
+@model ChefInternational.Pages.Recipes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Recipe</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipe.Label)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipe.Label)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipe.IngredientLines)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipe.IngredientLines)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipe.ImageUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipe.ImageUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipe.RecipeUrl)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipe.RecipeUrl)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Recipe.HealthLabels)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Recipe.HealthLabels)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Recipe.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

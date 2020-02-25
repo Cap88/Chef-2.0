@@ -1,0 +1,54 @@
+@page
+@model ChefInternational.Pages.Recipes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Recipe</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Recipe.Label" class="control-label"></label>
+                <input asp-for="Recipe.Label" class="form-control" />
+                <span asp-validation-for="Recipe.Label" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recipe.IngredientLines" class="control-label"></label>
+                <input asp-for="Recipe.IngredientLines" class="form-control" />
+                <span asp-validation-for="Recipe.IngredientLines" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recipe.ImageUrl" class="control-label"></label>
+                <input asp-for="Recipe.ImageUrl" class="form-control" />
+                <span asp-validation-for="Recipe.ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recipe.RecipeUrl" class="control-label"></label>
+                <input asp-for="Recipe.RecipeUrl" class="form-control" />
+                <span asp-validation-for="Recipe.RecipeUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Recipe.HealthLabels" class="control-label"></label>
+                <input asp-for="Recipe.HealthLabels" class="form-control" />
+                <span asp-validation-for="Recipe.HealthLabels" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
