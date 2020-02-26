@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeroe\\Desktop\\ChefInternational\\ChefInternational.csproj": {}
+    "C:\\Users\\jeroe\\Desktop\\HerokuContainer\\ChefInternational\\ChefInternational.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeroe\\Desktop\\ChefInternational\\ChefInternational.csproj": {
+    "C:\\Users\\jeroe\\Desktop\\HerokuContainer\\ChefInternational\\ChefInternational.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeroe\\Desktop\\ChefInternational\\ChefInternational.csproj",
+        "projectUniqueName": "C:\\Users\\jeroe\\Desktop\\HerokuContainer\\ChefInternational\\ChefInternational.csproj",
         "projectName": "ChefInternational",
-        "projectPath": "C:\\Users\\jeroe\\Desktop\\ChefInternational\\ChefInternational.csproj",
+        "projectPath": "C:\\Users\\jeroe\\Desktop\\HerokuContainer\\ChefInternational\\ChefInternational.csproj",
         "packagesPath": "C:\\Users\\jeroe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeroe\\Desktop\\ChefInternational\\obj\\",
+        "outputPath": "C:\\Users\\jeroe\\Desktop\\HerokuContainer\\ChefInternational\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jeroe\\AppData\\Roaming\\NuGet\\NuGet.Config"
